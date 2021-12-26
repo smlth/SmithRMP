@@ -103,10 +103,17 @@ class ViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let tapGestureRecognizer: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(ViewController.dismissKeyboard))
+        let tapGestureRecognizer: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
            view.addGestureRecognizer(tapGestureRecognizer)
         
-        view.backgroundColor = .systemFill
+        let rgbColor = UIColor(
+            red: 25/255,
+            green: 25/255,
+            blue: 25/255,
+            alpha: 1.0
+        )
+        
+        view.backgroundColor = rgbColor
         setupUI()
     }
     
